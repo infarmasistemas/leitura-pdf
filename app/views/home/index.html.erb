@@ -1,0 +1,7 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<%= form_tag(home_treat_file_path, method: "post", id:'teste') do %>
+  <%= file_field_tag(:file, accept:"image/*,application/pdf") %>
+  <%= hidden_field_tag(:base64) %>
+  <button id="but" onclick="sendFile()" type="button" class="btn btn-primary">Criar Base64</button>
+<% end %>
